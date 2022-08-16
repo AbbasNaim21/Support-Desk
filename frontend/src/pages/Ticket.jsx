@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import Modal from 'react-modal'
 import { FaPlus } from 'react-icons/fa'
@@ -105,6 +106,10 @@ function Ticket() {
           <FaPlus /> Add Note
         </button>
       )}
+
+      <Link className='btn' to={`/ticket/${ticket._id}/edit`}>
+        Edit Ticket
+      </Link>
 
       <Modal
         isOpen={modalIsOpen}

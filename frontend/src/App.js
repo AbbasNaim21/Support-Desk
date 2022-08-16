@@ -9,6 +9,7 @@ import Register from './pages/Register'
 import NewTicket from './pages/NewTicket'
 import Tickets from './pages/Tickets'
 import Ticket from './pages/Ticket'
+import EditTicket from './pages/EditTicket'
 
 // NOTE: Here we have removed the nested routing as the path is the same
 
@@ -43,6 +44,14 @@ function App() {
               element={
                 <PrivateRoute>
                   <Ticket />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path='/ticket/:ticketId/edit'
+              element={
+                <PrivateRoute>
+                  <EditTicket />
                 </PrivateRoute>
               }
             />
